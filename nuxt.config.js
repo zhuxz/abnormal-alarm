@@ -1,3 +1,11 @@
+const routerBase =
+process.env.DEPLOY_ENV === 'GH_PAGES'
+  ? {
+      router: {
+        base: '/abnormal-alarm/'
+      }
+    }
+  : {}
 
 export default {
   srcDir: 'src/',
@@ -55,6 +63,10 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module'
   ],
+  /**
+   * router extra configurations
+   */
+  ...routerBase,
   /*
   ** Nuxt.js modules
   */
@@ -66,5 +78,8 @@ export default {
   */
   build: {
     transpile: [/^element-ui/]
+  },
+  generate: {
+    dir: 'docs'
   }
 }
