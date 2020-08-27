@@ -1,0 +1,72 @@
+@import './variables.scss';
+
+html {
+  font-family:
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-size: small;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+  width: 100%;
+}
+
+.layout-container {
+  height: 100%;
+  min-width: $lyMinScreenWidth;
+}
+
+.layout-header {
+  background-color: $lyHeaderBgColor;
+  color: #333;
+  text-align: center;
+  height: $lyHeaderHeight;
+  line-height: $lyHeaderHeight;
+}
+
+.layout-main {
+  height: 100%;
+  background-color: $lyHeaderBgColor;
+  color: #333;
+  text-align: center;
+  padding: 0;
+}
+
+.layout-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.navbar-item-container {
+  display: inline;
+  line-height: $lyHeaderHeight;
+}
+
+.my-notify {
+  font-size: small;
+}
