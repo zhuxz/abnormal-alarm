@@ -2,7 +2,7 @@
 <template>
   <div class="bell-container">
     <el-tooltip class="item" effect="light" content="监测前后端实时数据推送连接是否断开" placement="bottom-end">
-      <img v-if="connect" class="bell-image" src="'bell-active.svg' | staticPath" alt="">
+      <img v-if="connect" class="bell-image" :src="'bell-active.svg' | staticPath" alt="">
       <img v-else :src="'bell.svg' | staticPath" alt="">
     </el-tooltip>
   </div>
