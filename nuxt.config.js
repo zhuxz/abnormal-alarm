@@ -83,6 +83,7 @@ export default {
     transpile: [/^element-ui/]
   },
   generate: {
-    dir: 'docs'
+    dir: 'docs',
+    subFolders: false
   }
 }
