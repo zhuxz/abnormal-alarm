@@ -7,6 +7,8 @@ process.env.DEPLOY_ENV === 'GH_PAGES'
     }
   : {}
 
+const publicRoot = process.env.DEPLOY_ENV === 'GH_PAGES' ? '/abnormal-alarm' : ''
+
 export default {
   srcDir: 'src/',
   // buildDir: 'nuxt-dist',
@@ -32,7 +34,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: publicRoot + '/favicon.ico' }
     ]
   },
   /*
@@ -47,7 +49,8 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui',
-    '@/plugins/echarts'
+    '@/plugins/echarts',
+    { src: '@/plugins/globalFilter.js', ssr: true }
   ],
   /*
   ** Auto import components

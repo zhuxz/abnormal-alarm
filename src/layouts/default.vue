@@ -3,8 +3,8 @@
   <el-container class="layout-container">
     <el-header class="layout-header">
       <audio v-show="0" id="bell" controls>
-        <source src="/11750.wav" type="audio/ogg">
-        <source src="/11750.mp3" type="audio/mpeg">
+        <source :src="'11750.wav' | staticPath" type="audio/ogg">
+        <source :src="'11750.mp3' | staticPath" type="audio/mpeg">
         您的浏览器不支持 audio 元素。
       </audio>
       <el-form
